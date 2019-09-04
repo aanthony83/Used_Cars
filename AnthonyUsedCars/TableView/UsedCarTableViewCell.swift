@@ -24,6 +24,11 @@ class UsedCarTableViewCell: UITableViewCell {
     @IBOutlet weak var phoneNumber: UITextView!
     
     
+    
+    
+    
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
