@@ -17,7 +17,6 @@ class API {
     
     // API
     
-    
     static let carURL = "https://carfax-for-consumers.firebaseio.com/assignment.json"
     
     
