@@ -3,25 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1AD80F136EA5E42341C6803 /* Pods_AnthonyUsedCars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31425BAA14FAA432DA3D41F4 /* Pods_AnthonyUsedCars.framework */; };
 		A9FB7FE9231FE0F40063D470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB7FE8231FE0F40063D470 /* AppDelegate.swift */; };
-		A9FB7FEB231FE0F40063D470 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB7FEA231FE0F40063D470 /* ViewController.swift */; };
+		A9FB7FEB231FE0F40063D470 /* UsedCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB7FEA231FE0F40063D470 /* UsedCarViewController.swift */; };
 		A9FB7FEE231FE0F40063D470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FB7FEC231FE0F40063D470 /* Main.storyboard */; };
 		A9FB7FF0231FE0F60063D470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9FB7FEF231FE0F60063D470 /* Assets.xcassets */; };
 		A9FB7FF3231FE0F60063D470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FB7FF1231FE0F60063D470 /* LaunchScreen.storyboard */; };
+		A9FB7FFD231FE3F80063D470 /* CarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB7FFC231FE3F80063D470 /* CarAPI.swift */; };
+		A9FB7FFF231FE4EC0063D470 /* CarDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB7FFE231FE4EC0063D470 /* CarDataModel.swift */; };
+		A9FB8003231FF2060063D470 /* UsedCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB8001231FF2060063D470 /* UsedCarTableViewCell.swift */; };
+		A9FB8004231FF2060063D470 /* UsedCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9FB8002231FF2060063D470 /* UsedCarTableViewCell.xib */; };
+		A9FB8009232023630063D470 /* UsedCarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB8007232023630063D470 /* UsedCarCollectionViewCell.swift */; };
+		A9FB800A232023630063D470 /* UsedCarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9FB8008232023630063D470 /* UsedCarCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31425BAA14FAA432DA3D41F4 /* Pods_AnthonyUsedCars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnthonyUsedCars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A1E53AA440DFDE671C4AD4 /* Pods-AnthonyUsedCars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnthonyUsedCars.debug.xcconfig"; path = "Target Support Files/Pods-AnthonyUsedCars/Pods-AnthonyUsedCars.debug.xcconfig"; sourceTree = "<group>"; };
 		A9FB7FE5231FE0F40063D470 /* AnthonyUsedCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnthonyUsedCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FB7FE8231FE0F40063D470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A9FB7FEA231FE0F40063D470 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A9FB7FEA231FE0F40063D470 /* UsedCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedCarViewController.swift; sourceTree = "<group>"; };
 		A9FB7FED231FE0F40063D470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9FB7FEF231FE0F60063D470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9FB7FF2231FE0F60063D470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9FB7FF4231FE0F60063D470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9FB7FFC231FE3F80063D470 /* CarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAPI.swift; sourceTree = "<group>"; };
+		A9FB7FFE231FE4EC0063D470 /* CarDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDataModel.swift; sourceTree = "<group>"; };
+		A9FB8001231FF2060063D470 /* UsedCarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedCarTableViewCell.swift; sourceTree = "<group>"; };
+		A9FB8002231FF2060063D470 /* UsedCarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsedCarTableViewCell.xib; sourceTree = "<group>"; };
+		A9FB8007232023630063D470 /* UsedCarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedCarCollectionViewCell.swift; sourceTree = "<group>"; };
+		A9FB8008232023630063D470 /* UsedCarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsedCarCollectionViewCell.xib; sourceTree = "<group>"; };
+		AF04CC1263362B87F4C1DF64 /* Pods-AnthonyUsedCars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnthonyUsedCars.release.xcconfig"; path = "Target Support Files/Pods-AnthonyUsedCars/Pods-AnthonyUsedCars.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1AD80F136EA5E42341C6803 /* Pods_AnthonyUsedCars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05DF0D737787BA6A30EE3A04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31425BAA14FAA432DA3D41F4 /* Pods_AnthonyUsedCars.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A9FB7FDC231FE0F40063D470 = {
 			isa = PBXGroup;
 			children = (
 				A9FB7FE7231FE0F40063D470 /* AnthonyUsedCars */,
 				A9FB7FE6231FE0F40063D470 /* Products */,
+				E0600F492761A37A99C2A34F /* Pods */,
+				05DF0D737787BA6A30EE3A04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +81,53 @@
 		A9FB7FE7231FE0F40063D470 /* AnthonyUsedCars */ = {
 			isa = PBXGroup;
 			children = (
+				A9FB8000231FF10D0063D470 /* TableView */,
+				A9FB7FFB231FE3420063D470 /* Model */,
+				A9FB7FFA231FE3210063D470 /* Networking */,
 				A9FB7FE8231FE0F40063D470 /* AppDelegate.swift */,
-				A9FB7FEA231FE0F40063D470 /* ViewController.swift */,
+				A9FB7FEA231FE0F40063D470 /* UsedCarViewController.swift */,
 				A9FB7FEC231FE0F40063D470 /* Main.storyboard */,
 				A9FB7FEF231FE0F60063D470 /* Assets.xcassets */,
 				A9FB7FF1231FE0F60063D470 /* LaunchScreen.storyboard */,
 				A9FB7FF4231FE0F60063D470 /* Info.plist */,
 			);
 			path = AnthonyUsedCars;
+			sourceTree = "<group>";
+		};
+		A9FB7FFA231FE3210063D470 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A9FB7FFC231FE3F80063D470 /* CarAPI.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A9FB7FFB231FE3420063D470 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A9FB7FFE231FE4EC0063D470 /* CarDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A9FB8000231FF10D0063D470 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A9FB8001231FF2060063D470 /* UsedCarTableViewCell.swift */,
+				A9FB8002231FF2060063D470 /* UsedCarTableViewCell.xib */,
+				A9FB8007232023630063D470 /* UsedCarCollectionViewCell.swift */,
+				A9FB8008232023630063D470 /* UsedCarCollectionViewCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		E0600F492761A37A99C2A34F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92A1E53AA440DFDE671C4AD4 /* Pods-AnthonyUsedCars.debug.xcconfig */,
+				AF04CC1263362B87F4C1DF64 /* Pods-AnthonyUsedCars.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9FB7FF7231FE0F60063D470 /* Build configuration list for PBXNativeTarget "AnthonyUsedCars" */;
 			buildPhases = (
+				18C83E2A184A913EB92B0FA8 /* [CP] Check Pods Manifest.lock */,
 				A9FB7FE1231FE0F40063D470 /* Sources */,
 				A9FB7FE2231FE0F40063D470 /* Frameworks */,
 				A9FB7FE3231FE0F40063D470 /* Resources */,
+				604D576F35598A6BDF3143B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -100,7 +168,7 @@
 				};
 			};
 			buildConfigurationList = A9FB7FE0231FE0F40063D470 /* Build configuration list for PBXProject "AnthonyUsedCars" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -123,19 +191,76 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9FB7FF3231FE0F60063D470 /* LaunchScreen.storyboard in Resources */,
+				A9FB800A232023630063D470 /* UsedCarCollectionViewCell.xib in Resources */,
 				A9FB7FF0231FE0F60063D470 /* Assets.xcassets in Resources */,
 				A9FB7FEE231FE0F40063D470 /* Main.storyboard in Resources */,
+				A9FB8004231FF2060063D470 /* UsedCarTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18C83E2A184A913EB92B0FA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnthonyUsedCars-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		604D576F35598A6BDF3143B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnthonyUsedCars/Pods-AnthonyUsedCars-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnthonyUsedCars/Pods-AnthonyUsedCars-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A9FB7FE1231FE0F40063D470 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9FB7FEB231FE0F40063D470 /* ViewController.swift in Sources */,
+				A9FB7FEB231FE0F40063D470 /* UsedCarViewController.swift in Sources */,
+				A9FB7FFD231FE3F80063D470 /* CarAPI.swift in Sources */,
+				A9FB8009232023630063D470 /* UsedCarCollectionViewCell.swift in Sources */,
+				A9FB8003231FF2060063D470 /* UsedCarTableViewCell.swift in Sources */,
+				A9FB7FFF231FE4EC0063D470 /* CarDataModel.swift in Sources */,
 				A9FB7FE9231FE0F40063D470 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +405,7 @@
 		};
 		A9FB7FF8231FE0F60063D470 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92A1E53AA440DFDE671C4AD4 /* Pods-AnthonyUsedCars.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +424,7 @@
 		};
 		A9FB7FF9231FE0F60063D470 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF04CC1263362B87F4C1DF64 /* Pods-AnthonyUsedCars.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
