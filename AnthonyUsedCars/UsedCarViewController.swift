@@ -43,8 +43,9 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
             self.UsedCars = carData
             print("This is the Results \(self.UsedCars?.count ?? 0)")
             self.collectionView.reloadData()
+            self.createbarbutton()
+
     }
-       
 
     }
     
@@ -89,8 +90,7 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
         filteredCars = UsedCars!.filter({ (cars : CarDataModel ) -> Bool in
             return (cars.year?.lowercased().contains(searchText.lowercased()) ?? false)
         })
-        
-        
+
         self.collectionView.reloadData()
     }
     
@@ -194,9 +194,9 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        <#code#>
+//    }
     
     
 }
