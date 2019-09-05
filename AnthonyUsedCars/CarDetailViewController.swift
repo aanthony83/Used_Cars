@@ -7,19 +7,38 @@
 //
 
 import UIKit
+import AlamofireImage
+import Alamofire
 
 class CarDetailViewController: UIViewController {
 
     var UsedCars:CarDataModel?
 
+    @IBOutlet weak var aview: UIView!
     @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var year: UILabel!
+    @IBOutlet weak var make: UILabel!
+    @IBOutlet weak var model: UILabel!
+    @IBOutlet weak var miles: UILabel!
+    @IBOutlet weak var carImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         price.text = UsedCars?.listPrice
-
-        // Do any additional setup after loading the view.
+        year.text = UsedCars?.year
+        make.text = UsedCars?.make
+        model.text = UsedCars?.model
+        miles.text = UsedCars?.mileage
+        
+        Alamofire.request((UsedCars?.imageURL)!).responseImage { response in
+            debugPrint(response)
+            
+            
+            if let image = response.result.value {
+                self.carImage.image = image
+            }
+        }
     }
     
 
