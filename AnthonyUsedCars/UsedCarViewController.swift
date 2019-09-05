@@ -34,6 +34,7 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
         // Registering the xib
         collectionView.register(UINib(nibName: "UsedCarCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "subcell")
         
+        
         setupSearchController()
         
         
@@ -42,8 +43,11 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
             self.UsedCars = carData
             print("This is the Results \(self.UsedCars?.count ?? 0)")
             self.collectionView.reloadData()
-            }
     }
+       
+
+    }
+    
     
     
     //MARK: - SearchBar
@@ -95,10 +99,29 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
             filterRowsForSearchedText(text)
         }
         collectionView.reloadData()
+        createbarbutton()
     }
     
     func isfiltering() -> Bool {
         return  searchController.isActive && searchController.searchBar.text != ""
+    }
+    
+    
+    // Function to display number of search results
+    
+    func createbarbutton () {
+        
+        if isfiltering() {
+            //Create Right navigation button
+            let LeftBarButton = UIBarButtonItem(title: "Results:\(self.filteredCars.count)", style: UIBarButtonItem.Style.plain, target: self, action: nil)
+            LeftBarButton.tintColor = UIColor.white
+            self.navigationItem.rightBarButtonItem = LeftBarButton
+        }
+        else {
+            let LeftBarButton = UIBarButtonItem(title: "Results:\(self.UsedCars?.count ?? 0)", style: UIBarButtonItem.Style.plain, target: self, action: nil)
+            LeftBarButton.tintColor = UIColor.white
+            self.navigationItem.rightBarButtonItem = LeftBarButton
+        }
     }
     
     
@@ -169,6 +192,10 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
         
         return cell
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        <#code#>
     }
     
     
