@@ -23,5 +23,10 @@ struct CarDataModel {
     var dealerCity:String?
     var dealerState:String?
     var dealerPhone:String?
+    var mpgCity:String?
+    var mpgHighway:String?
+    var engine:String?
+    var vehicleCondition:String?
+    var vin:String?
   
 }

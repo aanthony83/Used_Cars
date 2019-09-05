@@ -30,7 +30,7 @@ class API {
             if response.result.isSuccess {
                 let CarDataJson :JSON = JSON(response.result.value)
                 
-                print(CarDataJson)
+//                print(CarDataJson)
                 
                 let entries = CarDataJson["listings"].arrayValue
 
@@ -50,9 +50,18 @@ class API {
                 let dealerCity = entry["dealer"]["city"].stringValue + ","
                 let dealerState = entry["dealer"]["state"].stringValue
                 let dealerPhone = entry["dealer"]["phone"].stringValue
+                let mpgCity = entry["mpgCity"].stringValue
+                let mpgHighway = entry["mpgHighway"].stringValue
+                let engine = entry["engine"].stringValue
+                let vehicleCondition = entry["vehicleCondition"].stringValue
+                let vin = entry["vin"].stringValue
+
+
+
+
                 
                 
-                let carInfo = CarDataModel(imageURL: imageURL, year: year, make: make, model: model, trim: trim, listPrice: price, mileage: mileage, dealerCity: dealerCity, dealerState: dealerState, dealerPhone: dealerPhone)
+                let carInfo = CarDataModel(imageURL: imageURL, year: year, make: make, model: model, trim: trim, listPrice: price, mileage: mileage, dealerCity: dealerCity, dealerState: dealerState, dealerPhone: dealerPhone, mpgCity: mpgCity ,mpgHighway: mpgHighway , engine: engine , vehicleCondition: vehicleCondition , vin: vin)
                 
                 carData.append(carInfo)
                 }
