@@ -23,10 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="267"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nKW-Am-CO2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="98E-UO-jua"/>
-                                    <constraint firstAttribute="height" constant="119" id="UYH-c6-YeD"/>
+                                    <constraint firstAttribute="height" constant="136" id="UYH-c6-YeD"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Dv6-Th-qYH" userLabel="Vehicle Stack View">
@@ -119,7 +119,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yxN-0l-u2B" secondAttribute="trailing" constant="8" id="3qG-cw-ev5"/>
                             <constraint firstItem="yxN-0l-u2B" firstAttribute="top" secondItem="Dv6-Th-qYH" secondAttribute="bottom" constant="23" id="F7G-SL-6Z2"/>
-                            <constraint firstItem="Dv6-Th-qYH" firstAttribute="top" secondItem="nKW-Am-CO2" secondAttribute="bottom" constant="25" id="IKG-Az-uPw"/>
+                            <constraint firstItem="Dv6-Th-qYH" firstAttribute="top" secondItem="nKW-Am-CO2" secondAttribute="bottom" constant="8" id="IKG-Az-uPw"/>
                             <constraint firstItem="nKW-Am-CO2" firstAttribute="leading" secondItem="TZw-jG-qVt" secondAttribute="leading" id="Nny-iV-r0e"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0De-AE-eqW" secondAttribute="trailing" constant="102" id="Y57-3S-nFv"/>
                             <constraint firstAttribute="trailing" secondItem="nKW-Am-CO2" secondAttribute="trailing" id="YlP-dw-thR"/>

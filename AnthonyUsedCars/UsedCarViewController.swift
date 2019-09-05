@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource {
+class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UISearchBarDelegate , UISearchResultsUpdating , UISearchControllerDelegate {
    
     
 
@@ -19,10 +19,13 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
 
     var UsedCars:[CarDataModel]?
     var CarResults = [CarDataModel]()
+    var filteredCars = [CarDataModel]()
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var searchController = UISearchController(searchResultsController: nil)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +34,71 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
         // Registering the xib
         collectionView.register(UINib(nibName: "UsedCarCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "subcell")
         
+        setupSearchController()
         
         
         API.getCarData { (carData)
             in
             self.UsedCars = carData
+            print("This is the Results \(self.UsedCars?.count ?? 0)")
             self.collectionView.reloadData()
             }
+    }
+    
+    
+    //MARK: - SearchBar
+    /***************************************************************/
+    
+    func setupSearchController() {
+        
+        //         Adds the searchbar to the navigation header
+        
+        definesPresentationContext = true
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Search by Year"
+        searchController.hidesNavigationBarDuringPresentation = false
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.sizeToFit()
+        //        tableView.tableHeaderView = searchController.searchBar
+        
+        let cancelButtonAttributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.white]
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(cancelButtonAttributes, for: .normal)
+        
+        if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+            textfield.textColor = UIColor.white
+            textfield.tintColor = UIColor.black
+            textfield.font = UIFont(name: "Helvetica Neue", size: 13)
+            if let backgroundview = textfield.subviews.first {
+                
+                backgroundview.backgroundColor = UIColor.white
+                // Rounded corner
+                backgroundview.layer.cornerRadius = 10;
+                backgroundview.clipsToBounds = true;
+            }
+        }
+    }
+    
+    func filterRowsForSearchedText(_ searchText: String) {
+        
+        filteredCars = UsedCars!.filter({ (cars : CarDataModel ) -> Bool in
+            return (cars.year?.lowercased().contains(searchText.lowercased()) ?? false)
+        })
+        
+        
+        self.collectionView.reloadData()
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let text = searchController.searchBar.text {
+            filterRowsForSearchedText(text)
+        }
+        collectionView.reloadData()
+    }
+    
+    func isfiltering() -> Bool {
+        return  searchController.isActive && searchController.searchBar.text != ""
     }
     
     
@@ -49,24 +110,42 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return UsedCars?.count ?? 0
-
+        
+        if isfiltering() {
+            return filteredCars.count
+        }
+        else {
+            return UsedCars?.count ?? 0
+            
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "subcell", for: indexPath) as! UsedCarCollectionViewCell
         
-        //        cell.carImage.image = UsedCars?[indexPath.row].imageURL
-        cell.year.text = UsedCars?[indexPath.row].year
-        cell.make.text = UsedCars?[indexPath.row].make
-        cell.model.text = UsedCars?[indexPath.row].model
-        cell.price.text = UsedCars?[indexPath.row].listPrice
-        cell.miles.text = UsedCars?[indexPath.row].mileage
-        cell.city.text = UsedCars?[indexPath.row].dealerCity
-        cell.state?.text = UsedCars?[indexPath.row].dealerState
-        cell.phoneNumber.text = UsedCars?[indexPath.row].dealerPhone?.toPhoneNumber()
-        
-        
+        if isfiltering() {
+            
+            cell.year.text = filteredCars[indexPath.row].year
+            cell.make.text = filteredCars[indexPath.row].make
+            cell.model.text = filteredCars[indexPath.row].model
+            cell.price.text = filteredCars[indexPath.row].listPrice
+            cell.miles.text = filteredCars[indexPath.row].mileage
+            cell.city.text = filteredCars[indexPath.row].dealerCity
+            cell.state?.text = filteredCars[indexPath.row].dealerState
+            cell.phoneNumber.text = filteredCars[indexPath.row].dealerPhone?.toPhoneNumber()
+        }
+            
+        else {
+            cell.year.text = UsedCars?[indexPath.row].year
+            cell.make.text = UsedCars?[indexPath.row].make
+            cell.model.text = UsedCars?[indexPath.row].model
+            cell.price.text = UsedCars?[indexPath.row].listPrice
+            cell.miles.text = UsedCars?[indexPath.row].mileage
+            cell.city.text = UsedCars?[indexPath.row].dealerCity
+            cell.state?.text = UsedCars?[indexPath.row].dealerState
+            cell.phoneNumber.text = UsedCars?[indexPath.row].dealerPhone?.toPhoneNumber()
+            
+        }
         Alamofire.request((UsedCars?[indexPath.row].imageURL)!).responseImage { response in
             debugPrint(response)
             
@@ -91,8 +170,8 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
         return cell
         
     }
-
-
+    
+    
 }
 
 
