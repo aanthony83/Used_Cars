@@ -45,7 +45,7 @@ class API {
                 let make = entry["make"].stringValue
                 let model = entry["model"].stringValue
                 let trim = entry["trim"].stringValue
-                let price = entry["listPrice"].stringValue
+                let price = "$" + entry["listPrice"].stringValue
                 let mileage = entry["mileage"].stringValue + "k " + "Mi"
                 let dealerCity = entry["dealer"]["city"].stringValue + ","
                 let dealerState = entry["dealer"]["state"].stringValue

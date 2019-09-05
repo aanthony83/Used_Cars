@@ -194,9 +194,31 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
         
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let selectedCar:CarDataModel
+        
+        if isfiltering() {
+            selectedCar = filteredCars[indexPath.row]
+        }
+        else {
+            selectedCar = UsedCars![indexPath.row]
+            //        }
+            print("This is the selected Row \(selectedCar.listPrice ?? "")")
+            
+        }
+        
+        performSegue(withIdentifier: "cardetails", sender: selectedCar)
+
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let vc = segue.destination as? CarDetailViewController {
+                vc.UsedCars = sender as? CarDataModel
+    }
+    }
     
     
 }

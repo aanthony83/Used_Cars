@@ -20,7 +20,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BJQ-oC-bYM">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.90980392156862744" green="0.95294117647058818" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="j2a-30-oMf">
                                     <size key="itemSize" width="349" height="267"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -56,6 +56,7 @@
                     <navigationItem key="navigationItem" title="Used Cars" id="Gk5-aD-h7l"/>
                     <connections>
                         <outlet property="collectionView" destination="BJQ-oC-bYM" id="WzG-fj-Tta"/>
+                        <segue destination="Eem-ko-xjF" kind="show" identifier="cardetails" id="0Q4-4O-hgc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duS-2u-CDC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -66,6 +67,37 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1934.7826086956522" y="-549.10714285714278"/>
+        </scene>
+        <!--Care Details-->
+        <scene sceneID="OLC-aH-vEe">
+            <objects>
+                <viewController storyboardIdentifier="cardetails" title="Care Details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Eem-ko-xjF" customClass="CarDetailViewController" customModule="AnthonyUsedCars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bLO-0e-av6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIF-Yk-0tW">
+                                <rect key="frame" x="110" y="134" width="194" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.070588235289999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fIF-Yk-0tW" firstAttribute="top" secondItem="AWw-5V-2IA" secondAttribute="top" constant="46" id="7n3-EI-lNI"/>
+                            <constraint firstItem="AWw-5V-2IA" firstAttribute="trailing" secondItem="fIF-Yk-0tW" secondAttribute="trailing" constant="110" id="Cr0-6Q-b1m"/>
+                            <constraint firstItem="fIF-Yk-0tW" firstAttribute="leading" secondItem="AWw-5V-2IA" secondAttribute="leading" constant="110" id="NBP-e8-muj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AWw-5V-2IA"/>
+                    </view>
+                    <connections>
+                        <outlet property="price" destination="fIF-Yk-0tW" id="fWF-UQ-Fvi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpG-Vg-FfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2769.5652173913045" y="-549.10714285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xfx-hu-FRX">

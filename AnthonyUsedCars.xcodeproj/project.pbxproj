@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A1AD80F136EA5E42341C6803 /* Pods_AnthonyUsedCars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31425BAA14FAA432DA3D41F4 /* Pods_AnthonyUsedCars.framework */; };
+		A97A0DA72321536E00F37CC5 /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A0DA62321536E00F37CC5 /* CarDetailViewController.swift */; };
 		A9FB7FE9231FE0F40063D470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB7FE8231FE0F40063D470 /* AppDelegate.swift */; };
 		A9FB7FEB231FE0F40063D470 /* UsedCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB7FEA231FE0F40063D470 /* UsedCarViewController.swift */; };
 		A9FB7FEE231FE0F40063D470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FB7FEC231FE0F40063D470 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		31425BAA14FAA432DA3D41F4 /* Pods_AnthonyUsedCars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnthonyUsedCars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A1E53AA440DFDE671C4AD4 /* Pods-AnthonyUsedCars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnthonyUsedCars.debug.xcconfig"; path = "Target Support Files/Pods-AnthonyUsedCars/Pods-AnthonyUsedCars.debug.xcconfig"; sourceTree = "<group>"; };
+		A97A0DA62321536E00F37CC5 /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
 		A9FB7FE5231FE0F40063D470 /* AnthonyUsedCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnthonyUsedCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FB7FE8231FE0F40063D470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9FB7FEA231FE0F40063D470 /* UsedCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedCarViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				A9FB7FEF231FE0F60063D470 /* Assets.xcassets */,
 				A9FB7FF1231FE0F60063D470 /* LaunchScreen.storyboard */,
 				A9FB7FF4231FE0F60063D470 /* Info.plist */,
+				A97A0DA62321536E00F37CC5 /* CarDetailViewController.swift */,
 			);
 			path = AnthonyUsedCars;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				A9FB8009232023630063D470 /* UsedCarCollectionViewCell.swift in Sources */,
 				A9FB8003231FF2060063D470 /* UsedCarTableViewCell.swift in Sources */,
 				A9FB7FFF231FE4EC0063D470 /* CarDataModel.swift in Sources */,
+				A97A0DA72321536E00F37CC5 /* CarDetailViewController.swift in Sources */,
 				A9FB7FE9231FE0F40063D470 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
