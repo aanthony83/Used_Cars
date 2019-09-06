@@ -53,6 +53,9 @@ class CarDetailViewController: UIViewController {
             }
         }
         
+        if UsedCars?.imageURL == ".jpg" {
+            carImage.image = UIImage(named: "noImage")
+        }
         
 //        view1.layer.shadowRadius = 3
 //        view1.layer.shadowOffset = .zero

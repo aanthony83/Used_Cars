@@ -188,6 +188,10 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
             }
         }
         
+        if cell.carImage.image == nil {
+            cell.carImage.image = UIImage(named: "noImage")
+        }
+        
         cell.contentView.layer.cornerRadius = 4.0
         cell.contentView.layer.borderWidth = 1.0
         cell.contentView.layer.borderColor = UIColor.clear.cgColor
