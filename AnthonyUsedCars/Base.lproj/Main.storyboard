@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" id="gns-3o-Ot3" customClass="UsedCarCollectionViewCell" customModule="AnthonyUsedCars" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="gns-3o-Ot3" customClass="UsedCarCollectionViewCell" customModule="AnthonyUsedCars" customModuleProvider="target">
                                         <rect key="frame" x="32.5" y="0.0" width="349" height="267"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -113,24 +113,24 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w2b-Tq-noi">
-                                                <rect key="frame" x="12" y="116" width="374" height="165"/>
+                                                <rect key="frame" x="12" y="74" width="374" height="258"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="374" id="GO8-h1-a6J"/>
-                                                    <constraint firstAttribute="height" constant="165" id="PDm-vo-KVS"/>
+                                                    <constraint firstAttribute="height" constant="258" id="PDm-vo-KVS"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEk-k4-R2E">
-                                                <rect key="frame" x="12" y="306" width="374" height="30.5"/>
+                                                <rect key="frame" x="12" y="351" width="374" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h07-2R-nln" userLabel="Vehicle Detail Line">
-                                                <rect key="frame" x="149" y="344" width="100" height="4"/>
+                                                <rect key="frame" x="149" y="389" width="100" height="4"/>
                                                 <color key="backgroundColor" red="0.9882352941176471" green="0.72156862745098038" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fqP-SO-Hmb">
-                                                <rect key="frame" x="12" y="385" width="374" height="198"/>
+                                                <rect key="frame" x="12" y="430" width="374" height="198"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="801-Vp-7b0" userLabel="mpg">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
@@ -141,7 +141,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="xDw-4L-EQZ" userLabel="mpg Stack View">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="xDw-4L-EQZ" userLabel="mpg Stack View">
                                                                 <rect key="frame" x="190" y="11" width="131.5" height="20"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="mpgCity" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyB-W7-9bf" userLabel="mpgHighway_Label">
@@ -165,7 +165,7 @@
                                                             <constraint firstAttribute="bottom" secondItem="e2e-TZ-9fo" secondAttribute="bottom" constant="11" id="Cnh-Sk-WzJ"/>
                                                             <constraint firstItem="e2e-TZ-9fo" firstAttribute="top" secondItem="801-Vp-7b0" secondAttribute="top" constant="11" id="FCI-LZ-xVO"/>
                                                             <constraint firstAttribute="bottom" secondItem="xDw-4L-EQZ" secondAttribute="bottom" constant="11" id="LCg-c0-btz"/>
-                                                            <constraint firstItem="xDw-4L-EQZ" firstAttribute="leading" secondItem="e2e-TZ-9fo" secondAttribute="trailing" constant="123" id="OoD-1T-oDh"/>
+                                                            <constraint firstItem="xDw-4L-EQZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="e2e-TZ-9fo" secondAttribute="trailing" symbolic="YES" id="OoD-1T-oDh"/>
                                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xDw-4L-EQZ" secondAttribute="trailing" constant="48.5" id="jpl-xz-5wZ"/>
                                                             <constraint firstItem="xDw-4L-EQZ" firstAttribute="top" secondItem="801-Vp-7b0" secondAttribute="top" constant="11" id="lUU-y6-QbY"/>
                                                             <constraint firstAttribute="height" constant="42" id="sct-67-dJz"/>
@@ -265,7 +265,7 @@
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="NEk-k4-R2E" firstAttribute="top" secondItem="w2b-Tq-noi" secondAttribute="bottom" constant="25" id="4It-yx-C4H"/>
+                                            <constraint firstItem="NEk-k4-R2E" firstAttribute="top" secondItem="w2b-Tq-noi" secondAttribute="bottom" constant="19" id="4It-yx-C4H"/>
                                             <constraint firstItem="fqP-SO-Hmb" firstAttribute="top" secondItem="h07-2R-nln" secondAttribute="bottom" constant="37" id="4hc-IA-BoO"/>
                                             <constraint firstItem="Spi-Wx-gxL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lvo-4k-Qjb" secondAttribute="trailing" constant="8" symbolic="YES" id="5GC-EA-tA3"/>
                                             <constraint firstItem="cXV-Gr-t7Y" firstAttribute="top" secondItem="Spi-Wx-gxL" secondAttribute="top" id="7ZP-yR-PGA"/>
@@ -276,7 +276,7 @@
                                             <constraint firstItem="h07-2R-nln" firstAttribute="top" secondItem="NEk-k4-R2E" secondAttribute="bottom" constant="7.5" id="MMm-sO-o0N"/>
                                             <constraint firstItem="cXV-Gr-t7Y" firstAttribute="baseline" secondItem="lvo-4k-Qjb" secondAttribute="baseline" id="NkE-hC-0nP"/>
                                             <constraint firstItem="0g1-Kj-o54" firstAttribute="top" secondItem="cXV-Gr-t7Y" secondAttribute="bottom" constant="2" id="P0A-ry-gHA"/>
-                                            <constraint firstAttribute="bottom" secondItem="fqP-SO-Hmb" secondAttribute="bottom" constant="225" id="PyC-aR-ePb"/>
+                                            <constraint firstAttribute="bottom" secondItem="fqP-SO-Hmb" secondAttribute="bottom" constant="180" id="PyC-aR-ePb"/>
                                             <constraint firstAttribute="trailing" secondItem="Spi-Wx-gxL" secondAttribute="trailing" constant="8" id="Vfn-C0-F1x"/>
                                             <constraint firstItem="AcS-R4-OoE" firstAttribute="top" secondItem="Spi-Wx-gxL" secondAttribute="bottom" constant="2" id="WO3-zv-950"/>
                                             <constraint firstItem="w2b-Tq-noi" firstAttribute="centerX" secondItem="PQb-Xh-5X6" secondAttribute="centerX" id="YOq-oJ-bTZ"/>
@@ -284,13 +284,13 @@
                                             <constraint firstItem="h07-2R-nln" firstAttribute="leading" secondItem="PQb-Xh-5X6" secondAttribute="leading" constant="149" id="aur-5M-xee"/>
                                             <constraint firstAttribute="trailing" secondItem="AcS-R4-OoE" secondAttribute="trailing" constant="8" id="dfe-qB-9O2"/>
                                             <constraint firstItem="0g1-Kj-o54" firstAttribute="leading" secondItem="PQb-Xh-5X6" secondAttribute="leading" constant="8" id="gsv-Aw-IeB"/>
-                                            <constraint firstItem="w2b-Tq-noi" firstAttribute="top" secondItem="PQb-Xh-5X6" secondAttribute="top" constant="116" id="hLv-gi-qDv"/>
+                                            <constraint firstItem="w2b-Tq-noi" firstAttribute="top" secondItem="PQb-Xh-5X6" secondAttribute="top" constant="74" id="hLv-gi-qDv"/>
                                             <constraint firstItem="w2b-Tq-noi" firstAttribute="leading" secondItem="NEk-k4-R2E" secondAttribute="leading" id="hgj-k4-hiR"/>
-                                            <constraint firstItem="h07-2R-nln" firstAttribute="top" secondItem="PQb-Xh-5X6" secondAttribute="top" constant="344" id="qjg-Rf-zSC"/>
+                                            <constraint firstItem="h07-2R-nln" firstAttribute="top" secondItem="PQb-Xh-5X6" secondAttribute="top" constant="389" id="qjg-Rf-zSC"/>
                                             <constraint firstItem="AcS-R4-OoE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0g1-Kj-o54" secondAttribute="trailing" constant="8" symbolic="YES" id="rce-1x-Iq7"/>
                                             <constraint firstItem="cXV-Gr-t7Y" firstAttribute="leading" secondItem="PQb-Xh-5X6" secondAttribute="leading" constant="8" id="tg8-qu-Dbg"/>
                                             <constraint firstAttribute="trailing" secondItem="fqP-SO-Hmb" secondAttribute="trailing" constant="12" id="wtD-YM-Rm4"/>
-                                            <constraint firstItem="w2b-Tq-noi" firstAttribute="top" secondItem="AcS-R4-OoE" secondAttribute="bottom" constant="50" id="ywC-uT-WGB"/>
+                                            <constraint firstItem="w2b-Tq-noi" firstAttribute="top" secondItem="AcS-R4-OoE" secondAttribute="bottom" constant="8" id="ywC-uT-WGB"/>
                                         </constraints>
                                     </view>
                                 </subviews>
