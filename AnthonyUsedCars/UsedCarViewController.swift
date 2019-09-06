@@ -190,6 +190,8 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
         cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius:
             cell.contentView.layer.cornerRadius).cgPath
         
+       
+        
         return cell
         
     }
@@ -200,15 +202,16 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
         
         if isfiltering() {
             selectedCar = filteredCars[indexPath.row]
+            performSegue(withIdentifier: "cardetails", sender: selectedCar)
+
         }
         else {
             selectedCar = UsedCars![indexPath.row]
-            //        }
+            performSegue(withIdentifier: "cardetails", sender: selectedCar)
             print("This is the selected Row \(selectedCar.listPrice ?? "")")
             
         }
         
-        performSegue(withIdentifier: "cardetails", sender: selectedCar)
 
     }
     

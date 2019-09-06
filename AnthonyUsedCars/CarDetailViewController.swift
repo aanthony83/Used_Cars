@@ -22,6 +22,13 @@ class CarDetailViewController: UIViewController {
     @IBOutlet weak var miles: UILabel!
     @IBOutlet weak var carImage: UIImageView!
     
+    @IBOutlet weak var mpgCityLabel: UILabel!
+    @IBOutlet weak var mpgHighwayLabel: UILabel!
+    @IBOutlet weak var engineLabel: UILabel!
+    @IBOutlet weak var conditonLabel: UILabel!
+    @IBOutlet weak var vinLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +38,12 @@ class CarDetailViewController: UIViewController {
         model.text = UsedCars?.model
         miles.text = UsedCars?.mileage
         
+        mpgCityLabel.text = UsedCars?.mpgCity
+        mpgHighwayLabel.text = UsedCars?.mpgHighway
+        engineLabel.text = UsedCars?.engine
+        conditonLabel.text = UsedCars?.vehicleCondition
+        vinLabel.text = UsedCars?.vin
+        
         Alamofire.request((UsedCars?.imageURL)!).responseImage { response in
             debugPrint(response)
             
@@ -39,6 +52,12 @@ class CarDetailViewController: UIViewController {
                 self.carImage.image = image
             }
         }
+        
+        
+//        view1.layer.shadowRadius = 3
+//        view1.layer.shadowOffset = .zero
+//        view1.layer.shadowOpacity = 1
+//        view1.layer.shadowColor = UIColor.gray.cgColor
     }
     
 

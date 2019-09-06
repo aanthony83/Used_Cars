@@ -50,8 +50,8 @@ class API {
                 let dealerCity = entry["dealer"]["city"].stringValue + ","
                 let dealerState = entry["dealer"]["state"].stringValue
                 let dealerPhone = entry["dealer"]["phone"].stringValue
-                let mpgCity = entry["mpgCity"].stringValue
-                let mpgHighway = entry["mpgHighway"].stringValue
+                let mpgCity = entry["mpgCity"].stringValue + "City / "
+                let mpgHighway = entry["mpgHighway"].stringValue + "Hwy"
                 let engine = entry["engine"].stringValue
                 let vehicleCondition = entry["vehicleCondition"].stringValue
                 let vin = entry["vin"].stringValue
