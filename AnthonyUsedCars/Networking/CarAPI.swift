@@ -56,11 +56,7 @@ class API {
                 let vehicleCondition = entry["vehicleCondition"].stringValue
                 let vin = entry["vin"].stringValue
 
-
-
-
-                
-                
+ 
                 let carInfo = CarDataModel(imageURL: imageURL, year: year, make: make, model: model, trim: trim, listPrice: price, mileage: mileage, dealerCity: dealerCity, dealerState: dealerState, dealerPhone: dealerPhone, mpgCity: mpgCity ,mpgHighway: mpgHighway , engine: engine , vehicleCondition: vehicleCondition , vin: vin)
                 
                 carData.append(carInfo)

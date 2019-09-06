@@ -146,8 +146,10 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "subcell", for: indexPath) as! UsedCarCollectionViewCell
         
+        cell.carImage.image = nil
+        
         if isfiltering() {
-            
+
             cell.year.text = filteredCars[indexPath.row].year
             cell.make.text = filteredCars[indexPath.row].make
             cell.model.text = filteredCars[indexPath.row].model
@@ -156,8 +158,17 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
             cell.city.text = filteredCars[indexPath.row].dealerCity
             cell.state?.text = filteredCars[indexPath.row].dealerState
             cell.phoneNumber.text = filteredCars[indexPath.row].dealerPhone?.toPhoneNumber()
+
+            Alamofire.request(filteredCars[indexPath.row].imageURL ?? "").responseImage { response in
+                debugPrint(response)
+
+                if let image = response.result.value {
+                    cell.carImage.image = image
+                }
+            }
         }
             
+
         else {
             cell.year.text = UsedCars?[indexPath.row].year
             cell.make.text = UsedCars?[indexPath.row].make
@@ -167,14 +178,13 @@ class UsedCarViewController: UIViewController , UICollectionViewDelegate , UICol
             cell.city.text = UsedCars?[indexPath.row].dealerCity
             cell.state?.text = UsedCars?[indexPath.row].dealerState
             cell.phoneNumber.text = UsedCars?[indexPath.row].dealerPhone?.toPhoneNumber()
-            
-        }
-        Alamofire.request((UsedCars?[indexPath.row].imageURL)!).responseImage { response in
-            debugPrint(response)
-            
-            
-            if let image = response.result.value {
-                cell.carImage.image = image
+      
+            Alamofire.request(UsedCars?[indexPath.row].imageURL ?? "").responseImage { response in
+                debugPrint(response)
+                
+                if let image = response.result.value {
+                    cell.carImage.image = image
+                }
             }
         }
         
